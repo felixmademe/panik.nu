@@ -6,6 +6,11 @@
     <title>Panik</title>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <style>
+    .main {
+        height: 100vh;
+    }
+    </style>
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
     <script defer src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
@@ -20,7 +25,20 @@
     </script>
   </head>
   <body>
-    <h1>Panik.nu</h1>
-    <h2>Ta det lugnt!</h2>
+      <div class="main d-flex justify-content-center align-items-center">
+          <div class="text-center">
+              <h1>Panik.nu</h1>
+              <h2>Ta det lugnt!</h2>
+              <p>
+                  Vid nödsituation, <a href="tel:112">ring 112</a>.
+                  <br>
+                  Annars, ta några djupa andetag och slappna av.
+              </p>
+              <small>Ägd och driven av <a href="https://felixmade.me">felix made me</a> &copy; <span id="year"></span></small>
+          </div>
+      </div>
+      <script>
+          document.getElementById("year").innerHTML = new Date().getFullYear();
+      </script>
   </body>
 </html>
